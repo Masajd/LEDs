@@ -11,6 +11,7 @@
 class LEDs{
     private:
       int Pin;
+      int Brightness;
       long ms;
       long msOld;
       int LEDState;
@@ -18,25 +19,36 @@ class LEDs{
       String Name;
 
       void initLED();
+
       void setms(long);
       void setmsOld(long);
+
       long getms();
       long getmsOld();
 
     public:
       LEDs();
+      LEDs(int);
+      LEDs(int,String);
       LEDs(int,long,String);
+
       void setPin(int);
       void setLEDState(int);
       void settDelay(long);
       void setName(String);
+      void setBrightness(int);
+
       int getPin();
       int getLEDState();
       long gettDelay();
       String getName();
+      int getBrightness();
+
       void LEDOn();
+      void LEDOn(int);
       void LEDOff();
       void BlinkLED();
+      void BlinkLED(int);
 };
 
 #endif
