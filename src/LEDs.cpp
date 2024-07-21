@@ -212,7 +212,7 @@ void LEDs::BlinkLED(){
     setms(millis());
     if((getms() - getmsOld())>gettDelay()){
     setmsOld(getms());
-    if(getLEDState() == 0){
+    if(getLEDState() == 1){
         LEDOff();
     }
     else{
@@ -228,7 +228,7 @@ void LEDs::BlinkLED(int Brightness){
     setms(millis());
     if((getms() - getmsOld())>gettDelay()){
     setmsOld(getms());
-    if(getLEDState() == 0){
+    if(getLEDState() == 1){
         LEDOff();
     }
     else{
